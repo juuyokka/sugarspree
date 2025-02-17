@@ -24,7 +24,7 @@ apply plugin: 'idea'
 apply plugin: 'eclipse'
 apply from: 'https://raw.githubusercontent.com/LordGrimmauld/gitinfo-collect/master/build.gradle'
 
-group = "mod.${author}.${modid}"
+group = "dev.lactose.${modid}"
 version = "${minecraft_version}-${mod_version}"
 archivesBaseName = modid
 
@@ -114,12 +114,12 @@ repositories {
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 
-    implementation fg.deobf("com.simibubi.create:Create:mc${create_version}")
-    implementation fg.deobf("com.jozufozu.flywheel:Flywheel-Forge:${flywheel_version}")
+    implementation fg.deobf("com.simibubi.create:create-${create_minecraft_version}:${create_version}:slim") { transitive = false }
+    implementation fg.deobf("com.jozufozu.flywheel:flywheel-forge-${flywheel_minecraft_version}:${flywheel_version}")
 
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 
-    def registrate = "com.tterrag.registrate:Registrate:MC${minecraft_version}-${registrate_version}"
+    def registrate = "com.tterrag.registrate:Registrate:${registrate_version}"
     implementation fg.deobf(registrate)
     shade registrate
 }

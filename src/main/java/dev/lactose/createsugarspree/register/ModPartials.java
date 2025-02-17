@@ -1,8 +1,8 @@
-package mod.yourname.yourmodid.register;
+package dev.lactose.createsugarspree.register;
 
 import com.jozufozu.flywheel.core.PartialModel;
 import com.simibubi.create.Create;
-import mod.yourname.yourmodid.BuildConfig;
+import dev.lactose.createsugarspree.BuildConfig;
 import net.minecraft.resources.ResourceLocation;
 
 public class ModPartials {
